@@ -24,8 +24,11 @@ public  class Main {
         ObjectVector vetor = new ObjectVector(size);
         //System.out.println("Vetor gerado");
         //ObjectVector.ImprimeVetor(vetor.getVetor());
-
+        long startTime = System.currentTimeMillis();
         int[] vectorOrdingBubleSort = Ordering.BubbleSort(vetor.getVector());
+        long endTime = System.currentTimeMillis();
+        long elapsedTime = endTime - startTime;
+        System.out.println("SingleThread "+ elapsedTime + " milisegundos");
         System.out.println("Vetor ordenado ");
         ObjectVector.ImprimeVetor(vectorOrdingBubleSort);
 
